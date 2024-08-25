@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Stack
+
+Resources:
+  MyS3Bucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: "s3-demo"
+      AccessControl: Private
+      VersioningConfiguration:
+        Status: Enabled
+
+Outputs:
+  S3BucketName:
+    Description: "s3demo"
+    Value: !Ref MyS3Bucket
